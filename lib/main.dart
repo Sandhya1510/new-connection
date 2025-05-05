@@ -603,44 +603,32 @@ class NewConnectionPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ResponsiveRowColumn(
+                  Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    spacing: 10,
                     children: [
-                      Container(
+                      Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "Property Type",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "New Connection",
-                              style: TextStyle(color: Colors.blue),
-                            ),
+                            Text("Property Type", style: TextStyle(fontWeight: FontWeight.bold)),
+                            Text("New Connection", style: TextStyle(color: Colors.blue)),
                           ],
                         ),
                       ),
-                      SizedBox(height: 1),
-                      // Service Type container
-                      Container(
+                      SizedBox(width: 16),
+
+                      Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "Service Type",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            Text(
-                              "Permanent",
-                              style: TextStyle(color: Colors.blue),
-                            ),
+                            Text("Service Type", style: TextStyle(fontWeight: FontWeight.bold)),
+                            Text("Permanent", style: TextStyle(color: Colors.blue)),
                           ],
                         ),
                       ),
                     ],
                   ),
+
                   Divider(height: 32),
                   // Customer Details Heading
                   Text(
@@ -657,38 +645,40 @@ class NewConnectionPage extends StatelessWidget {
                   ResponsiveRowColumn(
                     spacing: 10,
                     children: [
-                      Container(
-                        child: Column(
+                       Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("Customer Name *"),
-                            TextField(
-                              decoration: InputDecoration(
-                                hintText: 'Enter Customer Name',
-                                border: OutlineInputBorder(),
-                              ),
-                              controller: TextEditingController(
-                                text: "Mohammed Aslam",
+                            SizedBox(
+                              width: 450,
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  hintText: 'Enter Customer Name',
+                                  border: OutlineInputBorder(),
+                                ),
+                                controller: TextEditingController(
+                                  text: "Mohammed Aslam",
+                                ),
                               ),
                             ),
                           ],
                         ),
-                      ),
-                      SizedBox(height: 1),
-                      Container(
-                        child: Column(
+                      // SizedBox(height: 1),
+                       Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("Customer Name Arabic *"),
-                            TextField(
-                              decoration: InputDecoration(
-                                hintText: 'Customer Name Arabic',
-                                border: OutlineInputBorder(),
-                              ),
-                            ),
+                                SizedBox(
+                                  width: 450,
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      hintText: 'Customer Name Arabic',
+                                      border: OutlineInputBorder(),
+                                    ),
+                                  ),
+                                ),
                           ],
                         ),
-                      ),
                     ],
                   ),
                   SizedBox(height: 24),
@@ -696,8 +686,7 @@ class NewConnectionPage extends StatelessWidget {
                   ResponsiveRowColumn(
                     spacing: 10,
                     children: [
-                      Container(
-                        child: Column(
+                        Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
@@ -710,11 +699,9 @@ class NewConnectionPage extends StatelessWidget {
                             ),
                           ],
                         ),
-                      ),
 
-                      SizedBox(height: 1),
-                      Container(
-                        child: Column(
+                      // SizedBox(height: 1),
+                        Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
@@ -726,7 +713,6 @@ class NewConnectionPage extends StatelessWidget {
                               style: TextStyle(color: Colors.blue),
                             ),
                           ],
-                        ),
                       ),
                     ],
                   ),
@@ -734,22 +720,23 @@ class NewConnectionPage extends StatelessWidget {
                   ResponsiveRowColumn(
                     spacing: 10,
                     children: [
-                      Container(
-                        child: Column(
+                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("Alternate Contact Number"),
-                            TextField(
-                              decoration: InputDecoration(
-                                hintText: 'Alternate Contact Number',
-                                border: OutlineInputBorder(),
+                            SizedBox(
+                              width: 450,
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  hintText: 'Alternate Contact Number',
+                                  border: OutlineInputBorder(),
+                                ),
                               ),
                             ),
                           ],
                         ),
-                      ),
-                      SizedBox(height: 1),
-                      Container()
+                      // SizedBox(height: 1),
+                      // Container()
                       // SizedBox(width: 250), // fixed Expanded issue
                     ],
                   ),
